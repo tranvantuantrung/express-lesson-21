@@ -92,7 +92,7 @@ module.exports.postAvatar = async (req, res) => {
     db.get("users")
       .find({ id: req.body.id })
       .assign({ avatar: file.url })
-      .writle();
+      .write();
   }
 
   res.redirect("/users/profile");
